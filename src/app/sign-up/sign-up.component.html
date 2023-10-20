@@ -1,0 +1,39 @@
+
+
+
+<div class="container">
+  <div class="page_containt">
+    <div class="page_title">
+      <span class="title">Avicole</span>
+      <span class="sub_title">gerer votre business avec la meilleur application de gestion.</span>
+    </div>
+    <div class="card">
+      <div class="card-bodi">
+        <div class="card-header">
+          <span>Enregistrement d'un utilisateur</span>
+        </div>
+        <form (ngSubmit)="signUp()">
+          <div>
+            <label></label>
+            <input placeholder="Email Address" type="email" [(ngModel)]="user.email" name="email" required>
+          </div>
+          <div>
+            <label></label>
+            <input placeholder="Nom d'utilisateur" type="text" [(ngModel)]="user.name" name="name" required>
+          </div>
+          <div>
+            <label></label>
+            <input placeholder="Numero de telephone" type="text" [(ngModel)]="user.contactNumber" name="contactNumber" required>
+          </div>
+          <div>
+            <label>
+            </label>
+            <input placeholder="Mot de passe" type="password" [(ngModel)]="user.password" name="password" required>
+          </div>
+          <button type="submit">Enregistrer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+

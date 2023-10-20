@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styles for screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Your CSS styles for small screens here */
+}
+
+/* Styles for screens between 768px and 1024px (typical for tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Your CSS styles for medium-sized screens here */
+}
+
+/* Styles for screens larger than 1024px (typical for desktops) */
+@media (min-width: 1025px) {
+  /* Your CSS styles for large screens here */
+}
