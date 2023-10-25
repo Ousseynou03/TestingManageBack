@@ -1,0 +1,557 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styles for screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Your CSS styles for small screens here */
+  .h_container{
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE CONTENT *********************/
+  .h_content{
+    display: flex;
+    flex-direction: column;
+    flex: 10;
+    order: 1;
+  }
+
+  /***************** HOME PAGE STAT ***********************/
+  .h_c_stats{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE STAT HEADER ****************/
+  .h_c_stats .h_c_header{
+    /*background-color: blueviolet;*/
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h_c_stats .h_c_header .h_pg{
+    margin-right: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+  }
+
+  .h_c_stats .h_c_header button{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    width: 150px;
+    color: rgb(98, 98, 98);
+    background-color: rgba(255, 255, 255, 0.673);
+    border: none;
+  }
+  .h_c_stats .h_c_header button span{
+    margin-right: 10px;
+  }
+  /***************** HOME PAGE STAT CONTENT ***************/
+  .h_c_c{
+    /*background-color: brown;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .h_c_c .h_c_c_stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c .h_c_c_stats a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+
+  .h_c_c_stats_vl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .spent_item_ind{
+    display: none;
+  }
+
+  .m_spent_item_ind{
+    display: none;
+  }
+
+  /***************** HOME PAGE MENU ***********************/
+  .h_c_menu{
+    flex: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 1;
+    background-color: rgba(255, 255, 255, 0.845);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .h_c_menu div{
+    margin: 10px;
+    padding: 10px;
+
+  }
+
+  .h_c_menu svg{
+    fill: rgba(0, 0, 0, 0.334);
+    height: 24px;
+    width: 24px;
+    transition: width 1s, height 1s;
+  }
+
+  .h_c_menu svg:hover{
+    height: 26px;
+    width: 26px;
+  }
+
+  /***************** PAGE TITLE & SUB-TITLE ****************/
+  .h_footer{
+    flex: .1;
+    padding: 10px;
+    /*background-color: aqua;*/
+    background-color: rgba(250, 235, 215, 0);
+
+  }
+  .h_footer .h_p_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .h_footer .h_p_title .h_title{
+    font-size: 50px;
+  }
+  .h_footer .h_p_title .h_sub_title{
+    display: none;
+  }
+
+  /**************** PAGE MVP SECTION *************************/
+  .h_c_c_mvp_prod{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c_mvp_prod a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+  .h_c_c_mvp_prod .h_c_c_mvp_prod_vl{
+    display: none;
+    justify-content: space-around;
+  }
+
+  .selected_option{
+    background-color: rgb(240, 248, 255);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+  }
+
+  .selected_option_svg{
+    fill: rgb(0, 102, 255);
+  }
+  .unselected_option{
+    background-color: transparent;
+  }
+}
+
+/* Styles for screens between 768px and 1024px (typical for tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .h_container{
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE CONTENT *********************/
+  .h_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 10;
+    order: 1;
+  }
+
+  /***************** HOME PAGE STAT ***********************/
+  .h_c_stats{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE STAT HEADER ****************/
+  .h_c_stats .h_c_header{
+    /*background-color: blueviolet;*/
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h_c_stats .h_c_header .h_pg{
+    margin-right: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+  }
+
+  .h_c_stats .h_c_header button{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    width: 150px;
+    color: rgb(98, 98, 98);
+    background-color: rgba(255, 255, 255, 0.673);
+    border: none;
+  }
+  .h_c_stats .h_c_header button span{
+    margin-right: 10px;
+  }
+  /***************** HOME PAGE STAT CONTENT ***************/
+  .h_c_c{
+    /*background-color: brown;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .h_c_c .h_c_c_stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c .h_c_c_stats a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+
+  .h_c_c_stats_vl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .spent_item_ind{
+    display: none;
+  }
+
+  .m_spent_item_ind{
+    display: none;
+  }
+
+  /***************** HOME PAGE MENU ***********************/
+  .h_c_menu{
+    flex: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    order: 1;
+    background-color: rgba(255, 255, 255, 0.845);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+
+  .h_c_menu div{
+    margin: 10px;
+    padding: 10px;
+
+  }
+
+  .h_c_menu svg{
+    fill: rgba(0, 0, 0, 0.334);
+    height: 24px;
+    width: 24px;
+    transition: width 1s, height 1s;
+  }
+
+  .h_c_menu svg:hover{
+    height: 26px;
+    width: 26px;
+  }
+
+  /***************** PAGE TITLE & SUB-TITLE ****************/
+  .h_footer{
+    flex: .1;
+    padding: 10px;
+    /*background-color: aqua;*/
+    background-color: rgba(250, 235, 215, 0);
+
+  }
+  .h_footer .h_p_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .h_footer .h_p_title .h_title{
+    font-size: 50px;
+  }
+  .h_footer .h_p_title .h_sub_title{
+    display: none;
+  }
+
+  /**************** PAGE MVP SECTION *************************/
+  .h_c_c_mvp_prod{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c_mvp_prod a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+  .h_c_c_mvp_prod .h_c_c_mvp_prod_vl{
+    display: none;
+    justify-content: space-around;
+  }
+
+  .selected_option{
+    background-color: rgb(240, 248, 255);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+  }
+
+  .selected_option_svg{
+    fill: rgb(0, 102, 255);
+  }
+  .unselected_option{
+    background-color: transparent;
+  }
+}
+
+/* Styles for screens larger than 1024px (typical for desktops) */
+@media (min-width: 1025px) {
+  /* Your CSS styles for large screens here */
+  .h_container{
+    width: 100%;
+    height: 950px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE CONTENT *********************/
+  .h_content{
+    display: flex;
+    flex: 10;
+  }
+
+  /***************** HOME PAGE STAT ***********************/
+  .h_c_stats{
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /***************** HOME PAGE STAT HEADER ****************/
+  .h_c_stats .h_c_header{
+    /*background-color: blueviolet;*/
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .h_c_stats .h_c_header .h_pg{
+    margin-right: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+  }
+
+  .h_c_stats .h_c_header button{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px;
+    width: 150px;
+    color: rgb(98, 98, 98);
+    background-color: rgba(255, 255, 255, 0.673);
+    border: none;
+  }
+  .h_c_stats .h_c_header button span{
+    margin-right: 10px;
+  }
+  /***************** HOME PAGE STAT CONTENT ***************/
+  .h_c_c{
+    /*background-color: brown;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .h_c_c .h_c_c_stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c .h_c_c_stats a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+
+  .h_c_c_stats_vl{
+    display: flex;
+    justify-content: space-around;
+  }
+  /***************** HOME PAGE MENU ***********************/
+  .h_c_menu{
+    flex: .8;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    /*background-color: gray;*/
+  }
+
+  .h_c_menu div{
+    margin: 10px;
+    padding: 10px;
+
+  }
+
+  .h_c_menu svg{
+    fill: rgba(0, 0, 0, 0.27);
+    height: 24px;
+    width: 24px;
+    transition: width 1s, height 1s;
+  }
+
+  .h_c_menu svg:hover{
+    height: 26px;
+    width: 26px;
+  }
+
+  /***************** PAGE TITLE & SUB-TITLE ****************/
+  .h_footer{
+    flex: 1;
+    padding: 10px;
+    /*background-color: aqua;*/
+  }
+  .h_footer .h_p_title{
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+  }
+  .h_footer .h_p_title .h_title{
+    font-size: 50px;
+  }
+  /**************** PAGE MVP SECTION *************************/
+  .h_c_c_mvp_prod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .h_c_c_mvp_prod a{
+    display: flex;
+    text-decoration: none;
+    justify-content: start;
+    align-items: stretch;
+    padding: 5px;
+    margin-left: 35px;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-weight: bold;
+  }
+
+  .h_c_c_mvp_prod .h_c_c_mvp_prod_vl{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .selected_option{
+    background-color: rgb(240, 248, 255);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+    border-radius: 10px;
+  }
+
+  .selected_option_svg{
+    fill: rgb(0, 102, 255);
+  }
+  .unselected_option{
+    background-color: transparent;
+  }
+}

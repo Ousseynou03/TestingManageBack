@@ -1,0 +1,197 @@
+<div class="dt_table_mng">
+  <div class="dt_table_lst">
+    <span><a href="#">Employees</a></span>
+    <span><a href="#">Customers</a></span>
+    <span><a href="#">Supplier</a></span>
+  </div>
+  <div class="dt_table_pc">
+    <div class="curr_opt_title">
+      <span>EMPLOYEES</span>
+    </div>
+    <div class="dt_table_pg">
+      <a href="#">
+        <div class="pg_ele">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </div>
+      </a>
+      <div>
+        5
+      </div>
+      <a href="#">
+        <div class="pg_ele">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="dt_table_ed">
+      <a href="#">
+        <div class="add">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+          </svg>
+          <span>Add</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="del">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
+          </svg>
+          <span>Delete</span>
+        </div>
+      </a>
+      <a href="#">
+        <div class="edit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+            <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
+          </svg>
+          <span>Edit</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="dt_table">
+    <table>
+      <tr >
+        <div *ngIf="users.select_col" class="slct">
+          <th><input type="checkbox"></th>
+        </div>
+        <th *ngFor="let field of users.Content[0].keys()"> {{field}} </th>
+      </tr>
+      <tr *ngFor="let ln of users.Content">
+        <div *ngIf="users.select_col" class="slct">
+          <th><input type="checkbox"></th>
+        </div>
+        <td *ngFor="let val of ln.values()">
+          {{val}}
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<style>
+  .dt_table_mng{
+    background-color: rgba(255, 255, 255, 0.433);
+    padding: 5px;
+  }
+  table{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.756);
+  }
+
+  .slct th{
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  tr{
+    /*background-color: rgba(255, 255, 255, 0.4);*/
+    border-radius: 10px;
+    padding: 2px;
+  }
+  td{
+    padding: 5px;
+  }
+  th{
+    color: white;
+  }
+  input {
+    border:none; /*2px solid blue;*/
+    background-color: red;
+  }
+  /****************** TABLE MENU ***********************/
+  .dt_table_lst{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.566);
+    padding: 10px;
+    margin: 2px;
+  }
+  .dt_table_lst a{
+    color: rgb(95, 95, 95);
+    text-decoration: none;
+  }
+  .dt_table_lst a:hover{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
+
+  /***************** TABLE EDIT SECTION ****************/
+  .dt_table_pc{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.566);
+    padding: 5px;
+  }
+  .dt_table_ed{
+    margin-right: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+  }
+  .dt_table_ed a{
+    text-decoration: none;
+  }
+  .dt_table_ed div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+  }
+  .dt_table_ed div span{
+    margin-left: 5px;
+    color: rgb(0, 132, 255);
+
+  }
+  .dt_table_ed div svg{
+    width: 20px;
+    height: 20px;
+  }
+  .add svg{
+    fill: rgb(0, 132, 255);
+  }
+  .del svg{
+    fill: red;
+  }
+  .edit svg{
+    fill: rgb(58, 59, 58);
+  }
+  .curr_opt_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .curr_opt_title span{
+    font-weight: bold;
+    color: white;
+  }
+  .dt_table_pg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pg_ele{
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+  }
+  .pg_ele svg{
+    fill: grey;
+  }
+  .pg_ele svg:hover{
+    fill: black;
+  }
+</style>

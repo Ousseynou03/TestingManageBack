@@ -1,0 +1,740 @@
+/* You can add global styles to this file, and also import other style files */
+/* Styles for screens smaller than 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  /* Your CSS styles for small screens here */
+  .card{
+    height: 285px;
+    width: 350px; /*small screens*/
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    }
+    /*-------------------------------*/
+    .title_card{
+        flex: .3;
+        display: flex;
+        padding: 2px;
+    }
+
+    .title_card .title{
+        flex: 4;
+        font-weight: bold;
+        margin: 10px 0px 0px 20px;
+    }
+    .title_card .help{
+        flex: .2;
+        /*background-color: aqua;*/
+    }
+    .title_card .help svg{
+      width: 24px;
+      height: 24px;
+      fill: rgb(168, 168, 168);
+    }
+    /*---------------------------------*/
+
+    .stat_card{
+        flex: 3;
+        display: flex;
+    }
+    .stat_card .repr{
+        flex: 3;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .stat_card .stat{
+        flex: 2;
+    }
+    .repr .repr_img{
+        padding-left: 23px;
+    }
+    .repr img{
+        width: 100px;
+        /*width: 100px;small screen*/
+    }
+
+    /*---------------------------------*/
+    .nb_card{
+        flex: 2;
+        display: flex;
+    }
+    .nb_card .numbers{
+        flex: 3;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+    .nb_card .numbers .numbers_title{
+        text-align: center;
+        flex: 1;
+    }
+    .nb_card .numbers .nb_nb{
+        flex: 4;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+        margin: 2px;
+        background-color: rgba(255, 255, 255, 0.321);
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+    }
+
+    .nb_card .amount{
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .nb_card .amount .amt{
+        font-size: 30px;
+        font-weight: bold;
+        color: rgba(99, 99, 99, 1);
+    }
+
+    .ind_item{
+        display: flex;
+        flex-direction: column;
+        height: 70px;
+        padding: 3px;
+        margin-left: 10px;
+    }
+
+    .ind_item .ind_item_title{
+        flex: 1;
+    }
+    .ind_item .ind_item_bd{
+        flex: 4;
+        display: flex;
+        justify-content: end;
+    }
+    .ind_nb{
+        padding: 5px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ind_nb p{
+        text-align: start;
+        font-size: 36px;
+        color: rgba(82, 82, 82, 1);
+    }
+    .ind_pc{
+        background-color: rgba(247, 247, 255, 0.733);
+        align-self: flex-end;
+        border-radius: 50%;
+        border: rgb(255, 255, 255) 1px solid;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+    }
+    .ind_pc p{
+        color: rgba(82, 82, 82, 1);
+        text-align: center;
+        font-size: 10px;
+    }
+    /*---------------------------------*/
+
+    .cm{
+        margin: 2px;
+    }
+
+    /*=====================================================================*/
+    .tooltip {
+    position: relative;
+    display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.423);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    }
+
+    .tooltip:hover .tooltiptext {
+    visibility: visible;
+    }
+    /*=====================================================================*/
+
+    * {
+    padding: 0;
+    margin: 0;
+    /*font-weight: 800;*/
+    /*font-family: 'IBM Plex Sans', sans-serif;*/
+    }
+    .wrapper-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .progress-bar {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      position: relative;
+    }
+    .progress-bar:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      /*background: #444;*/
+      z-index: 0;
+    }
+    /*===== The CSS =====*/
+    .progress{
+      width: 200px;
+      height: 280px;
+      z-index: 1;
+    }
+    .progress .track, .progress .fill{
+      fill: rgba(225, 225, 225, 0);
+      stroke-width: 3;
+      transform: rotate(90deg)translate(0px, -80px);
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+
+    }
+    .progress .track{
+      stroke: #fcfcfc2d;
+    }
+    .progress .fill {
+      stroke: rgb(32, 144, 248);
+      stroke-dasharray: 219.99078369140625;
+      stroke-dashoffset: -219.99078369140625;
+      transition: stroke-dashoffset 1s;
+    }
+    .progress .value {
+      fill: #ffffff;
+      text-anchor: middle;
+      display: block;
+      background-color: aliceblue;
+    }
+    .progress .text {
+      font-size: 12px;
+      fill: #fff;
+      text-anchor: middle;
+    }
+}
+
+/* Styles for screens between 768px and 1024px (typical for tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Your CSS styles for medium-sized screens here */
+  .card{
+    height: 350px;
+    /*height: 350px;*/
+    width: 500px;
+    /*width: 360px; small screens*/
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+/*-------------------------------*/
+.title_card{
+    flex: .3;
+    display: flex;
+    padding: 2px;
+}
+
+.title_card .title{
+    flex: 4;
+    font-weight: bold;
+    margin: 10px 0px 0px 20px;
+}
+.title_card .help{
+    flex: .2;
+    /*background-color: aqua;*/
+}
+.title_card .help svg{
+  width: 24px;
+  height: 24px;
+  fill: rgb(168, 168, 168);
+}
+/*---------------------------------*/
+
+.stat_card{
+    flex: 3;
+    display: flex;
+}
+.stat_card .repr{
+    flex: 3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.stat_card .stat{
+    flex: 2;
+}
+.repr .repr_img{
+    padding-left: 23px;
+}
+.repr img{
+    width: 120px;
+    /*width: 100px;small screen*/
+}
+/*.stat_card .repr .repr_img .repr_img_sec{
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  position:relative;
+}*/
+
+/*---------------------------------*/
+.nb_card{
+    flex: 2;
+    display: flex;
+}
+.nb_card .numbers{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+.nb_card .numbers .numbers_title{
+    text-align: center;
+    flex: 1;
+}
+.nb_card .numbers .nb_nb{
+    flex: 4;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.321);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+}
+
+.nb_card .amount{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nb_card .amount .amt{
+    font-size: 42px;
+    /*font-size: 30px;*/
+    font-weight: bold;
+    color: rgba(99, 99, 99, 1);
+}
+
+.ind_item{
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+.ind_item .ind_item_title{
+    flex: 1;
+}
+.ind_item .ind_item_bd{
+    flex: 4;
+    display: flex;
+    justify-content: end;
+}
+.ind_nb{
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ind_nb p{
+    text-align: start;
+    font-size: 36px;
+    color: rgba(82, 82, 82, 1);
+}
+.ind_pc{
+    background-color: rgba(247, 247, 255, 0.733);
+    align-self: flex-end;
+    border-radius: 50%;
+    border: rgb(255, 255, 255) 1px solid;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.ind_pc p{
+    color: rgba(82, 82, 82, 1);
+    text-align: center;
+    font-size: 10px;
+}
+/*---------------------------------*/
+
+.cm{
+    margin: 2px;
+}
+
+/*=====================================================================*/
+.tooltip {
+position: relative;
+display: inline-block;
+}
+
+.tooltip .tooltiptext {
+visibility: hidden;
+width: 120px;
+background-color: rgba(0, 0, 0, 0.423);
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 5px 0;
+
+/* Position the tooltip */
+position: absolute;
+z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+visibility: visible;
+}
+/*=====================================================================*/
+
+* {
+padding: 0;
+margin: 0;
+/*font-weight: 800;*/
+/*font-family: 'IBM Plex Sans', sans-serif;*/
+}
+.wrapper-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress-bar {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+
+}
+.progress-bar:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /*background: #444;*/
+  z-index: 0;
+}
+/*===== The CSS =====*/
+.progress{
+  width: 200px;
+  height: 280px;
+  z-index: 1;
+}
+.progress .track, .progress .fill{
+  fill: rgba(225, 225, 225, 0);
+  stroke-width: 3;
+  transform: rotate(90deg)translate(0px, -80px);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+
+}
+.progress .track{
+  stroke: #fcfcfc2d;
+}
+.progress .fill {
+  stroke: rgb(32, 144, 248);
+  stroke-dasharray: 219.99078369140625;
+  stroke-dashoffset: -219.99078369140625;
+  transition: stroke-dashoffset 1s;
+}
+.progress .value {
+  fill: #ffffff;
+  text-anchor: middle;
+  display: block;
+  background-color: aliceblue;
+}
+.progress .text {
+  font-size: 12px;
+  fill: #fff;
+  text-anchor: middle;
+}
+}
+
+/* Styles for screens larger than 1024px (typical for desktops) */
+@media (min-width: 1025px) {
+    /* Your CSS styles for large screens here */
+
+  .card{
+      height: 350px;
+      /*height: 350px;*/
+      width: 500px;
+      /*width: 360px; small screens*/
+      background-color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px;
+  }
+  /*-------------------------------*/
+  .title_card{
+      flex: .3;
+      display: flex;
+      padding: 2px;
+  }
+
+  .title_card .title{
+      flex: 4;
+      font-weight: bold;
+      margin: 10px 0px 0px 20px;
+  }
+  .title_card .help{
+      flex: .2;
+      /*background-color: aqua;*/
+  }
+  .title_card .help svg{
+    width: 24px;
+    height: 24px;
+    fill: rgb(168, 168, 168);
+  }
+  /*---------------------------------*/
+
+  .stat_card{
+      flex: 3;
+      display: flex;
+  }
+  .stat_card .repr{
+      flex: 3;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+  }
+
+  .stat_card .stat{
+      flex: 2;
+  }
+  .repr .repr_img{
+      padding-left: 23px;
+  }
+  .repr img{
+      width: 120px;
+      /*width: 100px;small screen*/
+  }
+  /*.stat_card .repr .repr_img .repr_img_sec{
+    background-color: red;
+    width: 40px;
+    height: 40px;
+    position:relative;
+  }*/
+
+  /*---------------------------------*/
+  .nb_card{
+      flex: 2;
+      display: flex;
+  }
+  .nb_card .numbers{
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+  }
+  .nb_card .numbers .numbers_title{
+      text-align: center;
+      flex: 1;
+  }
+  .nb_card .numbers .nb_nb{
+      flex: 4;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+      margin: 2px;
+      background-color: rgba(255, 255, 255, 0.321);
+      box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+  }
+
+  .nb_card .amount{
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  .nb_card .amount .amt{
+      font-size: 42px;
+      /*font-size: 30px;*/
+      font-weight: bold;
+      color: rgba(99, 99, 99, 1);
+  }
+
+  .ind_item{
+      display: flex;
+      flex-direction: column;
+      height: 70px;
+      padding: 3px;
+      margin-left: 10px;
+  }
+
+  .ind_item .ind_item_title{
+      flex: 1;
+  }
+  .ind_item .ind_item_bd{
+      flex: 4;
+      display: flex;
+      justify-content: end;
+  }
+  .ind_nb{
+      padding: 5px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .ind_nb p{
+      text-align: start;
+      font-size: 36px;
+      color: rgba(82, 82, 82, 1);
+  }
+  .ind_pc{
+      background-color: rgba(247, 247, 255, 0.733);
+      align-self: flex-end;
+      border-radius: 50%;
+      border: rgb(255, 255, 255) 1px solid;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px;
+  }
+  .ind_pc p{
+      color: rgba(82, 82, 82, 1);
+      text-align: center;
+      font-size: 10px;
+  }
+  /*---------------------------------*/
+
+  .cm{
+      margin: 2px;
+  }
+
+  /*=====================================================================*/
+  .tooltip {
+  position: relative;
+  display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.423);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+  visibility: visible;
+  }
+  /*=====================================================================*/
+
+  * {
+  padding: 0;
+  margin: 0;
+  /*font-weight: 800;*/
+  /*font-family: 'IBM Plex Sans', sans-serif;*/
+  }
+  .wrapper-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-bar {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+  .progress-bar:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /*background: #444;*/
+    z-index: 0;
+  }
+  /*===== The CSS =====*/
+  .progress{
+    width: 200px;
+    height: 280px;
+    z-index: 1;
+  }
+  .progress .track, .progress .fill{
+    fill: rgba(225, 225, 225, 0);
+    stroke-width: 3;
+    transform: rotate(90deg)translate(0px, -80px);
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
+
+  }
+  .progress .track{
+    stroke: #fcfcfc2d;
+  }
+  .progress .fill {
+    stroke: rgb(32, 144, 248);
+    stroke-dasharray: 219.99078369140625;
+    stroke-dashoffset: -219.99078369140625;
+    transition: stroke-dashoffset 1s;
+  }
+  .progress .value {
+    fill: #ffffff;
+    text-anchor: middle;
+    display: block;
+    background-color: aliceblue;
+  }
+  .progress .text {
+    font-size: 12px;
+    fill: #fff;
+    text-anchor: middle;
+  }
+}

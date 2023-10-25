@@ -60,6 +60,7 @@
     font-weight: bold;
     color: rgb(82, 82, 82);
     margin-bottom: 35px;
+    margin-top: 0px;
   }
   .card-bodi form{
     display: flex;
@@ -90,6 +91,9 @@
 /* Styles for screens larger than 1024px (typical for desktops) */
 @media (min-width: 1025px) {
   /* Your CSS styles for large screens here */
+  .cards{
+    margin-top: 250px;
+  }
   .card-bodi{
     background-color: rgba(245, 245, 245, 0.425);
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .4);
@@ -100,7 +104,7 @@
   }
 
   .card-bodi .card-header{
-    font-size:48px;
+    font-size: 32px;
     font-weight: bold;
     color: rgb(82, 82, 82);
     margin-bottom: 35px;
@@ -141,4 +145,17 @@
   padding: 20px;
   margin-bottom: 35px;
   width: 95%;
+}
+.cards{
+  /*height: 350px;
+  /*height: 350px;*/
+  /*width: 500px;
+  /*justify-content: center;*/
+  align-items: center;
+  /*width: 360px; small screens*/
+  /*background-color: rgba(255, 255, 255, 0.6);*/
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
 }

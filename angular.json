@@ -27,6 +27,10 @@
             "styles": [
               "src/app/sign-up/sign-up.component.css",
               "src/app/login/login.component.css",
+              "src/app/stat-item/stat-item.component.css",
+              "src/app/stat-item-bilan/stat-item-bilan.component.css",
+              "src/app/product-mvp/product-mvp.component.css",
+              "src/app/table-info-manager/table-info-manager.component.css",
               "src/styles.css"
             ],
             "scripts": []

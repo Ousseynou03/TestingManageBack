@@ -1,0 +1,53 @@
+#card_bl{
+  background-color: rgba(255, 255, 255, 0.427);
+}
+#nb_nb_bilan{
+  justify-content: space-around;
+}
+
+#val_pc_indc text{
+  fill: aliceblue;
+}
+
+#val_pc_indc .track{
+  stroke: transparent;
+}
+
+#val_pc_indc .fill{
+  stroke: rgb(255, 255, 255);
+  stroke-dasharray: 219.99078369140625;
+  stroke-dashoffset: -219.99078369140625;
+  transition: stroke-dashoffset 1s;
+}
+
+/******************* STATS BILANT TURNOVER INDIC *****************************/
+.stat_b_indc{
+  display: flex;
+}
+
+.stat_b_indc .stat_b_indc_turnover{
+  /*background-color: blue;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.stat_b_indc .stat_b_indc_turnover .stat_b_indc_turnover_number{
+  color: rgb(99, 99, 99);
+  font-weight: bold;
+  font-size: 46px;
+}
+
+.stat_b_indc .stat_b_indc_turnover .stat_b_indc_turnover_title{
+  color: aliceblue;
+}
+.stat_b_indc_trend{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 5px;
+}
+
+.stat_b_indc_trend img{
+  width: 36px;
+}
+

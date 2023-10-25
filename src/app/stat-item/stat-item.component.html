@@ -1,0 +1,109 @@
+<div class="card">
+  <div class="title_card cm">
+      <div class="title">
+          <span>{{ itemInfo.card_title | uppercase }}</span>
+      </div>
+      <div class="help">
+        <a href="#" title="documentation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text-fill" viewBox="0 0 16 16">
+            <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1zm0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1z"/>
+          </svg>
+        </a>
+      </div>
+  </div>
+  <div class="stat_card cm">
+      <div class="repr">
+          <div class="repr_img">
+              <img [src]="itemInfo.img_url" alt="">
+          </div>
+      </div>
+
+      <div class="stat">
+          <div class="wrapper-center tooltip">
+              <div class="progress-bar">
+                <svg class="progress" [attr.data-progress]="saledProductPercentage()"  x="0px" y="0px" viewBox="0 0 80 80"><!--data-progress="30"-->
+                  <path class="track" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />
+                  <path class="fill" d="M5,40a35,35 0 1,0 70,0a35,35 0 1,0 -70,0" />\
+
+                  <text class="value" x="50%" y="55%">
+                      0%
+                  </text>
+
+                </svg>
+              </div>
+              <span class="tooltiptext">Tooltip text</span>
+          </div>
+      </div>
+  </div>
+  <div class="nb_card cm">
+      <div class="numbers">
+          <div class="numbers_title">
+              <span>sells numbers</span>
+          </div>
+          <div class="nb_nb">
+              <div class="ind_item">
+                  <div class="ind_item_title">
+                      <span>
+                          {{itemInfo.product_1_name}}
+                      </span>
+                  </div>
+                  <div class="ind_item_bd">
+                      <div class="ind_nb">
+                          <p>
+                          {{itemInfo.product_1_sale_nb}}
+                          </p>
+                      </div>
+                      <div class="ind_pc">
+                          <p>
+                              {{(itemInfo.product_1_sale_nb/itemInfo.product_1_total_nb) | percent :"2.1-2"}}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+              <div class="ind_item">
+                  <div class="ind_item_title">
+                      <span>
+                        {{itemInfo.product_2_name}}
+                      </span>
+                  </div>
+                  <div class="ind_item_bd">
+                      <div class="ind_nb">
+                          <p>
+                            {{itemInfo.product_2_sale_nb}}
+                          </p>
+                      </div>
+                      <div class="ind_pc">
+                          <p>
+                            {{(itemInfo.product_2_sale_nb/itemInfo.product_2_total_nb) | percent :"2.1-2"}}
+                          </p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="amount">
+          <span>
+              Total amount
+          </span>
+          <span class="amt">
+              {{ itemInfo.product_1_sale_amount + itemInfo.product_2_sale_amount | currency}}
+          </span>
+      </div>
+  </div>
+  <script>
+    var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]);
+    }
+  };
+  window.onload = function(){
+    var max = -219.99078369140625;
+    forEach(document.querySelectorAll('.progress'), function (index, value) {
+    percent = value.getAttribute('data-progress');
+      value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
+      value.querySelector('.value').innerHTML = percent + '%';
+    });
+  }
+  </script>
+</div>
+

@@ -5,7 +5,8 @@
   body{
     font-family: 'Arial Narrow Bold', sans-serif;
     /*background-image: url("assets/images/bg.png");*/
-    background-image: linear-gradient(rgba(255, 0, 0, 0.5), blue);
+    /*background-image: linear-gradient(rgba(255, 0, 0, 0.5), blue);*/
+    background-color: rgb(32, 144, 248);
     background-repeat: no-repeat;
     background-size:2000px 1180px /*100% 100%*/;
   }
@@ -17,7 +18,8 @@
   body{
     font-family: 'Arial Narrow Bold', sans-serif;
     /*background-image: url("assets/images/bg.png");*/
-    background-image: linear-gradient(rgba(255, 0, 0, 0.5), blue);
+    /*background-image: linear-gradient(rgba(255, 0, 0, 0.5), blue);*/
+    background-color: rgb(32, 144, 248);
     background-repeat: no-repeat;
     background-size: /*2000px 1180px*/ 100% 100%;
   }
@@ -29,9 +31,10 @@
   body{
     font-family: 'Arial Narrow Bold', sans-serif;
     /*background-image: url("assets/images/bg.png");*/
-    background-image: linear-gradient(rgba(255, 0, 0, 0.5), blue);
+    /*background-image: linear-gradient(rgba(255, 153, 0, 0.697), rgba(0, 115, 255, 0.566));*/
+    background-color: rgb(32, 144, 248);
     background-repeat: no-repeat;
-    background-size: 100% 3000px /* 100% 100% */;
+    background-size: 100% 1000px /* 100% 100% */;
   }
 }
 
